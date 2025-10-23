@@ -7,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="light" data-scroll-behavior="smooth">
       <body className="bg-base-100 min-h-screen">
         <Navbar />
         <main className="container mx-auto mt-8">{children}</main>

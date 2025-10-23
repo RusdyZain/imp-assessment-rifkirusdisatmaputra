@@ -1,1 +1,17 @@
+# Node
 node_modules
+dist
+.next
+
+# Env
+.env
+.env.local
+.env.development
+.env.production
+
+# Prisma
+backend/prisma/dev.db
+
+# OS junk
+.DS_Store
+Thumbs.db

@@ -1,19 +1,17 @@
-import { Context, Next } from "hono";
 import { verifyToken } from "../utils/jwt";
+import type { Context, Next } from "hono";
 
 export const requireAuth = async (c: Context, next: Next) => {
-  const header = c.req.header("Authorization");
-  if (!header || !header.startsWith("Bearer ")) {
+  const authHeader = c.req.header("Authorization");
+  if (!authHeader?.startsWith("Bearer "))
     return c.json({ message: "Unauthorized" }, 401);
-  }
 
-  const token = header.split(" ")[1];
+  const token = authHeader.split(" ")[1];
   try {
     const decoded = verifyToken(token);
-    // simpan data user hasil decode ke context
     c.set("user", decoded);
     await next();
-  } catch (err) {
+  } catch {
     return c.json({ message: "Invalid or expired token" }, 403);
   }
 };

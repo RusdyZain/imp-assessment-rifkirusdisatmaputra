@@ -8,14 +8,18 @@ __turbopack_context__.s([
 ]);
 const API_URL = ("TURBOPACK compile-time value", "http://localhost:8080") || "http://localhost:8080";
 async function apiFetch(path, options = {}) {
-    const res = await fetch(`${API_URL}${path}`, {
+    const url = `${API_URL}${path.startsWith("/") ? path : `/${path}`}`;
+    const res = await fetch(url, {
         headers: {
             "Content-Type": "application/json",
             ...options.headers || {}
         },
         ...options
     });
-    if (!res.ok) throw new Error(await res.text());
+    if (!res.ok) {
+        const text = await res.text();
+        throw new Error(text || `Error ${res.status}`);
+    }
     return res.json();
 }
 }),

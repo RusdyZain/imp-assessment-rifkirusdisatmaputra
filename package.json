@@ -1,0 +1,13 @@
+{
+  "name": "fullstack-app",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "pnpm --parallel run dev",
+    "build": "pnpm --parallel run build",
+    "lint": "pnpm --parallel run lint"
+  }
+}

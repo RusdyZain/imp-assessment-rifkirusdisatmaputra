@@ -1,0 +1,8 @@
+{
+  "name": "imp-assessment",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

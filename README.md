@@ -1,18 +1,18 @@
-# 🧠 Fullstack HRD Management System
+# Fullstack HRD Management System
 
 A modern fullstack web application for recruitment and employee content management — built with **Next.js**, **Hono.js**, and **Prisma ORM**.  
 Developed by **Rifki Rusdi Satma Putra**, a Software Developer with experience in scalable fullstack applications and UI/UX optimization.
 
 ---
 
-## 🚀 Overview
+## Overview
 
 This project demonstrates a **clean fullstack architecture** using TypeScript across both backend and frontend.  
 It includes authentication, CRUD post management, and file uploads — designed with scalability, maintainability, and developer experience in mind.
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Layer               | Technology                                     |
 | ------------------- | ---------------------------------------------- |
@@ -23,9 +23,9 @@ It includes authentication, CRUD post management, and file uploads — designed 
 | **Package Manager** | pnpm                                           |
 | **Deployment**      | Node.js 20+                                    |
 
-## 🧩 Project Structure
+## Project Structure
 
-### 📦 Backend
+### Backend
 
 ```
 backend/
@@ -61,7 +61,7 @@ backend/
 ├─ tsconfig.json
 ```
 
-### 🎨 Frontend
+### Frontend
 
 ```
 frontend/
@@ -149,7 +149,7 @@ Frontend runs on → **[http://localhost:3000](http://localhost:3000)**
 
 ---
 
-## 🧰 Commands
+## Commands
 
 ### Backend
 
@@ -172,7 +172,7 @@ Frontend runs on → **[http://localhost:3000](http://localhost:3000)**
 
 ---
 
-## 💡 Technical Decisions
+## Technical Decisions
 
 | Area           | Choice                | Reason                                            |
 | -------------- | --------------------- | ------------------------------------------------- |
@@ -186,18 +186,18 @@ Frontend runs on → **[http://localhost:3000](http://localhost:3000)**
 
 ---
 
-## ✨ Features
+## Features
 
-* 🔐 Authentication (login/register with JWT)
-* 📝 CRUD Post Management (Create, Read, Update, Delete)
-* 🖼️ File Upload (image preview & storage)
-* 🌓 Theme-aware UI (light/dark via DaisyUI)
-* 🧭 Responsive layout and clean component design
-* ⚡ Optimized build pipeline with pnpm
+* Authentication (login/register with JWT)
+* CRUD Post Management (Create, Read, Update, Delete)
+* File Upload (image preview & storage)
+* Theme-aware UI (light/dark via DaisyUI)
+* Responsive layout and clean component design
+* Optimized build pipeline with pnpm
 
 ---
 
-## 📸 Application Preview
+## Application Preview
 
 Letakkan file screenshot pada `assets/screenshots/` dengan nama **1.jpg – 6.jpg**.
 
@@ -254,7 +254,7 @@ The goal is to demonstrate scalable engineering patterns that are easy to mainta
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Rifki Rusdi Satma Putra**
 Software Developer | Fullstack Engineer
@@ -263,6 +263,7 @@ Software Developer | Fullstack Engineer
 📧 [rifkirusdisatmaputra@gmail.com](mailto:rifkirusdisatmaputra@gmail.com)
 
 > Passionate about building scalable systems with clean architecture, intuitive UI, and real-world usability.
+
 
 
 

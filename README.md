@@ -28,31 +28,76 @@ It includes authentication, CRUD post management, and file uploads — designed 
 ### 📦 Backend
 
 backend/
+├─ prisma/                   # Prisma schema & migrations
+│  ├─ schema.prisma
+│  └─ seed.ts
 ├─ src/
-│  ├─ controllers/   # Handle requests (Auth, Posts)
-│  ├─ middlewares/   # Auth & rate limiter
-│  ├─ routes/        # Route definitions
-│  ├─ services/      # Business logic layer
-│  ├─ types/         # Zod validation & TS types
-│  ├─ utils/         # JWT, app initializer
-│  └─ server.ts      # Entrypoint
-├─ uploads/          # File uploads (images)
-├─ prisma/           # Prisma schema & seed
-├─ .env              # Environment variables
-└─ package.json
+│  ├─ controllers/           # Layer kontrol request-response
+│  │  ├─ authController.ts
+│  │  └─ postController.ts
+│  ├─ middlewares/           # Middleware global
+│  │  ├─ auth.ts             # JWT auth verification
+│  │  └─ rateLimits.ts       # API rate limiter
+│  ├─ routes/                # Routing layer
+│  │  ├─ auth.ts
+│  │  └─ post.ts
+│  ├─ services/              # Business logic layer
+│  │  └─ postService.ts
+│  ├─ types/                 # Validasi & tipe Zod
+│  │  ├─ authSchema.ts
+│  │  ├─ formidable.d.ts
+│  │  └─ post.ts
+│  ├─ utils/                 # Helper utilities
+│  │  ├─ jwt.ts              # Token sign & verify
+│  │  └─ app.ts              # Hono app initialization
+│  ├─ server.ts              # Entrypoint utama
+│  └─ generated/             # Prisma client (auto)
+├─ uploads/                  # Folder penyimpanan file upload
+├─ .env                      # Variabel environment
+├─ .gitignore
+├─ package.json
+├─ prisma.config.ts
+├─ tsconfig.json
+
 
 ### 🎨 Frontend
 
 frontend/
 ├─ app/
-│  ├─ (auth)/login, register, unauthorized
-│  ├─ (dashboard)/posts, new, [id]
-│  ├─ globals.css, layout.tsx
-│  └─ not-found.tsx
-├─ components/       # Reusable UI (PostCard, PostForm, Navbar)
-├─ lib/              # API + auth utilities
-├─ types/            # Type declarations
-└─ package.json
+│  ├─ (auth)/                     # Auth routes (isolated layout group)
+│  │  ├─ login/page.tsx
+│  │  ├─ register/page.tsx
+│  │  └─ unauthorized/page.tsx
+│  ├─ (dashboard)/posts/          # Protected dashboard pages
+│  │  ├─ page.tsx                 # List & CRUD posts
+│  │  ├─ [id]/page.tsx            # Edit or view single post
+│  │  └─ new/page.tsx             # Create new post
+│  ├─ global-error.tsx            # Global error fallback
+│  ├─ globals.css                 # Tailwind + DaisyUI base styles
+│  ├─ layout.tsx                  # Root layout wrapper
+│  ├─ not-found.tsx               # 404 page
+│  └─ page.tsx                    # Landing / home
+│
+├─ components/
+│  ├─ Background.tsx              # Gradient & blur decoration
+│  ├─ Navbar.tsx                  # Top navigation
+│  ├─ Pagination.tsx              # Page controls
+│  ├─ PostCard.tsx                # Popup modal detail view
+│  └─ PostForm.tsx                # Form create/update post
+│
+├─ lib/
+│  ├─ api.ts                      # Wrapper untuk fetch ke backend
+│  ├─ auth.ts                     # Token handler (localStorage + redirect)
+│  └─ types.ts                    # Shared TS interfaces
+│
+├─ types/
+│  └─ daisyui.d.ts                # Declaration fix untuk DaisyUI
+│
+├─ tailwind.config.js             # Tailwind + DaisyUI setup
+├─ postcss.config.js
+├─ next.config.ts
+├─ package.json
+├─ .env.local
 
 ## ⚡ Installation & Setup
 
@@ -214,4 +259,5 @@ Software Developer | Fullstack Engineer
 📧 [rifkirusdisatmaputra@gmail.com](mailto:rifkirusdisatmaputra@gmail.com)
 
 > Passionate about building scalable systems with clean architecture, intuitive UI, and real-world usability.
+
 

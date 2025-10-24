@@ -1,4 +1,3 @@
-```markdown
 # 🧠 Fullstack HRD Management System
 
 A modern fullstack web application for recruitment and employee content management — built with **Next.js**, **Hono.js**, and **Prisma ORM**.  
@@ -24,12 +23,9 @@ It includes authentication, CRUD post management, and file uploads — designed 
 | **Package Manager** | pnpm                                           |
 | **Deployment**      | Node.js 20+                                    |
 
----
-
 ## 🧩 Project Structure
 
 ### 📦 Backend
-```
 
 backend/
 ├─ src/
@@ -45,10 +41,7 @@ backend/
 ├─ .env              # Environment variables
 └─ package.json
 
-```
-
 ### 🎨 Frontend
-```
 
 frontend/
 ├─ app/
@@ -61,69 +54,47 @@ frontend/
 ├─ types/            # Type declarations
 └─ package.json
 
-````
-
----
-
 ## ⚡ Installation & Setup
 
 ### 1️⃣ Clone the Repository
-```bash
 git clone https://github.com/yourusername/hrd-management-system.git
 cd hrd-management-system
-````
 
 ### 2️⃣ Install Dependencies
 
-```bash
 cd backend && pnpm install
 cd ../frontend && pnpm install
-```
-
----
 
 ## 🧱 Backend Setup
 
 ### Create `.env` in `/backend`
 
-```env
 DATABASE_URL="postgresql://user:password@localhost:5432/hrd_db"
 JWT_SECRET="your_jwt_secret"
 PORT=8080
-```
 
 ### Initialize Database
 
-```bash
 pnpm db:generate
 pnpm db:push
 # (optional) seed
 pnpm db:seed
-```
 
 ### Run Backend
-
-```bash
 pnpm dev
-```
 
 Backend runs on → **[http://localhost:8080](http://localhost:8080)**
 
----
 
 ## 🖥️ Frontend Setup
 
 ### Create `.env.local` in `/frontend`
 
-```env
 NEXT_PUBLIC_API_URL=http://localhost:8080
-```
 
 ### Run Frontend
 
-```bash
 pnpm dev
-```
 
 Frontend runs on → **[http://localhost:3000](http://localhost:3000)**
 
@@ -184,25 +155,25 @@ Letakkan file screenshot pada `assets/screenshots/` dengan nama **1.jpg – 6.jp
 #### 🖥️ Post Detail
 
 <p align="center">
-  <img src="assets/screenshots/1.jpg" alt="Post Detail" width="80%"/>
+  <img src="assets/screenshots/1.jpeg" alt="Post Detail" width="80%"/>
 </p>
 
 #### 🧾 Post Page
 
 <p align="center">
-  <img src="assets/screenshots/2.jpg" alt="Post Page" width="80%"/>
+  <img src="assets/screenshots/2.jpeg" alt="Post Page" width="80%"/>
 </p>
 
 #### ✍️ Responsive Mobile Post Page
 
 <p align="center">
-  <img src="assets/screenshots/3.jpg" alt="Responsive Mobile Post Page" width="80%"/>
+  <img src="assets/screenshots/3.jpeg" alt="Responsive Mobile Post Page" width="80%"/>
 </p>
 
 #### 🔐 Responsive Landing Page
 
 <p align="center">
-  <img src="assets/screenshots/4.jpg" alt="Responsive Landing Page" width="80%"/>
+  <img src="assets/screenshots/4.jpeg" alt="Responsive Landing Page" width="80%"/>
 </p>
 
 #### 🧑‍💻 Register Page
@@ -214,7 +185,7 @@ Letakkan file screenshot pada `assets/screenshots/` dengan nama **1.jpg – 6.jp
 #### 🎨 Login Page
 
 <p align="center">
-  <img src="assets/screenshots/6.jpg" alt="Login Page" width="80%"/>
+  <img src="assets/screenshots/6.jpeg" alt="Login Page" width="80%"/>
 </p>
 
 > All screenshots are captured from local running instances of the project.
@@ -244,5 +215,3 @@ Software Developer | Fullstack Engineer
 
 > Passionate about building scalable systems with clean architecture, intuitive UI, and real-world usability.
 
-```
-```

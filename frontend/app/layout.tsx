@@ -1,5 +1,6 @@
 import "./globals.css";
 import ClientRoot from "./ClientRoot";
+import Background from "@/components/Background";
 
 export const metadata = {
   title: "Fullstack Blog App",
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Background />
         <ClientRoot>{children}</ClientRoot>
       </body>
     </html>

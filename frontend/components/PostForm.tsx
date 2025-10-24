@@ -14,12 +14,10 @@ export default function PostForm({ existing, onSuccess }: Props) {
   const [preview, setPreview] = useState<string>("");
   const [loading, setLoading] = useState(false);
 
-  // 🔹 Set nilai awal kalau existing post dikirim dari parent
   useEffect(() => {
     if (existing) {
       setTitle(existing.title || "");
       setContent(existing.content || "");
-      // Gunakan URL absolut dari API supaya preview tampil
       if (existing.imageUrl) {
         const fullUrl = `${process.env.NEXT_PUBLIC_API_URL}${existing.imageUrl}`;
         setPreview(fullUrl);
@@ -27,7 +25,6 @@ export default function PostForm({ existing, onSuccess }: Props) {
     }
   }, [existing]);
 
-  // 🔹 Upload image ke backend
   async function uploadImage(file: File) {
     const token = localStorage.getItem("token");
     const formData = new FormData();
@@ -44,15 +41,12 @@ export default function PostForm({ existing, onSuccess }: Props) {
     return data.url;
   }
 
-  // 🔹 Submit handler
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
       let imageUrl = existing?.imageUrl || "";
-
-      // Kalau ada file baru, upload dan ganti URL
       if (image) imageUrl = await uploadImage(image);
 
       const method = existing ? "PUT" : "POST";
@@ -79,14 +73,14 @@ export default function PostForm({ existing, onSuccess }: Props) {
       className="space-y-4 bg-base-100 p-4 sm:p-6 rounded-2xl shadow-md"
     >
       <input
-        className="input input-bordered w-full bg-slate-100 px-2"
+        className="input input-bordered w-full bg-base-200 text-base-content px-2"
         placeholder="Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
       />
       <textarea
-        className="textarea textarea-bordered w-full bg-slate-100 h-32 px-2"
+        className="textarea textarea-bordered w-full bg-base-200 text-base-content h-32 px-2"
         placeholder="Content"
         value={content}
         onChange={(e) => setContent(e.target.value)}
@@ -107,7 +101,6 @@ export default function PostForm({ existing, onSuccess }: Props) {
           }}
         />
 
-        {/* 🔹 Tampilkan preview jika sudah ada gambar */}
         {preview && (
           <div className="mt-3">
             <p className="text-xs text-base-content/70 mb-1">Preview:</p>

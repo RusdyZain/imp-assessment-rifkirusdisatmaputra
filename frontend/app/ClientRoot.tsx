@@ -30,7 +30,6 @@ export default function ClientRoot({
     >
       <Navbar />
 
-      {/* Theme toggle pindah ke bawah Navbar */}
       <div className="fixed right-4 bottom-4 z-40">
         <button
           onClick={toggleTheme}
@@ -41,12 +40,10 @@ export default function ClientRoot({
         </button>
       </div>
 
-      {/* Main */}
       <main className="flex-1 w-full flex flex-col items-center justify-start py-16 px-4 md:px-8">
         <div className="w-full max-w-5xl">{children}</div>
       </main>
 
-      {/* Footer */}
       <footer className="w-full py-6 border-t border-base-300 text-center text-sm text-base-content/70 bg-base-100/80 backdrop-blur-md">
         <p>
           © {new Date().getFullYear()}{" "}
@@ -56,10 +53,9 @@ export default function ClientRoot({
         </p>
       </footer>
 
-      {/* Decorative blobs */}
       <div className="fixed inset-0 -z-10 bg-gradient-to-br from-primary/10 via-base-200 to-base-100 animate-gradient-slow"></div>
       <div className="absolute top-32 -left-20 w-72 h-72 bg-primary/10 blur-3xl rounded-full opacity-40"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 blur-3xl rounded-full opacity-40"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/10 blur-3xl rounded-full opacity-40 pointer-events-none"></div>
     </div>
   );
 }

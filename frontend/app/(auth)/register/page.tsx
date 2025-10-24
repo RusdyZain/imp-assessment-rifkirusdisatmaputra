@@ -14,13 +14,11 @@ export default function RegisterPage() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  // Jika sudah login, arahkan langsung ke /posts
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) router.replace("/posts");
   }, [router]);
 
-  // 🔐 Password validation (mirror backend)
   function validatePassword(pw: string) {
     const rules = [
       { regex: /.{8,}/, msg: "Password must be at least 8 characters" },
@@ -42,7 +40,6 @@ export default function RegisterPage() {
     setSuccess("");
     setLoading(true);
 
-    // Validasi sisi client
     const pwError = validatePassword(password);
     if (pwError) {
       setError(pwError);
@@ -80,7 +77,6 @@ export default function RegisterPage() {
         </p>
 
         <form onSubmit={handleRegister} className="space-y-4 text-left">
-          {/* Full Name */}
           <label className="form-control w-full">
             <span className="label-text font-medium text-base-content">
               Full Name
@@ -96,7 +92,6 @@ export default function RegisterPage() {
             />
           </label>
 
-          {/* Email */}
           <label className="form-control w-full">
             <span className="label-text font-medium text-base-content">
               Email
@@ -112,7 +107,6 @@ export default function RegisterPage() {
             />
           </label>
 
-          {/* Password */}
           <label className="form-control w-full">
             <span className="label-text font-medium text-base-content">
               Password
@@ -141,13 +135,11 @@ export default function RegisterPage() {
             </label>
           </label>
 
-          {/* Error / Success messages */}
           {error && <p className="text-red-500 text-sm font-medium">{error}</p>}
           {success && (
             <p className="text-green-600 text-sm font-medium">{success}</p>
           )}
 
-          {/* Submit */}
           <button
             type="submit"
             disabled={loading}
@@ -168,10 +160,9 @@ export default function RegisterPage() {
         </p>
       </div>
 
-      {/* === Background effects === */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-base-200 to-base-100 animate-gradient-slow"></div>
       <div className="absolute top-10 left-10 w-40 sm:w-64 h-40 sm:h-64 bg-primary/5 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-10 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-secondary/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
     </section>
   );
 }

@@ -18,7 +18,6 @@ export default function Navbar() {
   }
 
   if (isLoggedIn === null) {
-    // placeholder saat cek token
     return (
       <nav className="w-full bg-base-100/80 backdrop-blur-md border-b border-base-300 shadow-sm px-6 py-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -33,7 +32,6 @@ export default function Navbar() {
   return (
     <nav className="w-full sticky top-0 z-50 bg-base-100/80 backdrop-blur-md border-b border-base-300 shadow-sm">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        {/* === Left: Brand === */}
         <Link
           href="/"
           className="font-extrabold text-2xl text-primary tracking-tight hover:opacity-90 transition-opacity"
@@ -41,7 +39,6 @@ export default function Navbar() {
           Fullstack<span className="text-base-content">Blog</span>
         </Link>
 
-        {/* === Center: Desktop Links (only after login) === */}
         {isLoggedIn && (
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
             <Link
@@ -59,7 +56,6 @@ export default function Navbar() {
           </div>
         )}
 
-        {/* === Right: Auth Buttons === */}
         <div className="hidden md:flex items-center gap-3">
           {isLoggedIn ? (
             <>
@@ -88,7 +84,6 @@ export default function Navbar() {
           )}
         </div>
 
-        {/* === Mobile Toggle === */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -100,7 +95,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* === Mobile Dropdown === */}
       {menuOpen && (
         <div className="md:hidden bg-base-100/95 backdrop-blur-md border-t border-base-300 shadow-lg">
           <div className="flex flex-col p-4 space-y-3 text-center">

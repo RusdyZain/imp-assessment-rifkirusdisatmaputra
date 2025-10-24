@@ -27,6 +27,7 @@ It includes authentication, CRUD post management, and file uploads — designed 
 
 ### 📦 Backend
 
+```
 backend/
 ├─ prisma/                   # Prisma schema & migrations
 │  ├─ schema.prisma
@@ -58,10 +59,11 @@ backend/
 ├─ package.json
 ├─ prisma.config.ts
 ├─ tsconfig.json
-
+```
 
 ### 🎨 Frontend
 
+```
 frontend/
 ├─ app/
 │  ├─ (auth)/                     # Auth routes (isolated layout group)
@@ -98,6 +100,8 @@ frontend/
 ├─ next.config.ts
 ├─ package.json
 ├─ .env.local
+
+```
 
 ## ⚡ Installation & Setup
 
@@ -259,5 +263,6 @@ Software Developer | Fullstack Engineer
 📧 [rifkirusdisatmaputra@gmail.com](mailto:rifkirusdisatmaputra@gmail.com)
 
 > Passionate about building scalable systems with clean architecture, intuitive UI, and real-world usability.
+
 
 

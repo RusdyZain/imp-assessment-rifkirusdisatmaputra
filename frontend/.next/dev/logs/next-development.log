@@ -1,2 +1,829 @@
-[00:00:05.179] Server  LOG      ✓ Ready in 3.4s
-[00:01:57.521] Server  LOG      ○ Compiling / ...
+[00:00:03.069] Server  LOG      ✓ Ready in 2.2s
+[00:00:06.163] Server  LOG      ○ Compiling /posts ...
+[00:00:07.374] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:51.708] Server  LOG      ✓ Compiled in 509ms
+[00:01:51.903] Server  ERROR    ⨯ ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+
+
+[00:01:52.325] Browser ERROR   ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+[00:01:53.096] Browser ERROR   ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+[00:01:54.376] Browser ERROR   ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+[00:01:54.376] Browser ERROR   ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+[00:01:54.564] Browser ERROR   uncaughtError: Error: ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+
+
+[00:01:54.766] Browser ERROR   ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+[00:01:54.766] Browser ERROR   ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+[00:01:54.766] Browser ERROR   ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+[00:01:54.766] Browser ERROR   ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+[00:02:16.051] Browser ERROR   ./frontend/app/layout.tsx:7:14
+Ecmascript file had an error
+   5 | import { useEffect, useState } from "react";
+   6 |
+>  7 | export const metadata = {
+     |              ^^^^^^^^
+   8 |   title: "Fullstack Blog App",
+   9 |   description:
+  10 |     "A clean and modern blog platform built with Next.js, Hono.js, and PostgreSQL.",
+
+You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+Import traces:
+  Client Component Browser:
+    ./frontend/app/layout.tsx [Client Component Browser]
+    ./frontend/app/layout.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/app/layout.tsx [Client Component SSR]
+    ./frontend/app/layout.tsx [Server Component]
+[00:03:07.458] Server  ERROR    ⨯ ./frontend/app/layout.tsx:2:1
+Module not found: Can't resolve './ClientRoot'
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:07.461] Server  ERROR    ⨯ ./frontend/app/layout.tsx:2:1
+Module not found: Can't resolve './ClientRoot'
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:07.463] Server  ERROR    ⨯ ./frontend/app/layout.tsx:2:1
+Module not found: Can't resolve './ClientRoot'
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:07.465] Server  ERROR    ⨯ ./frontend/app/layout.tsx:2:1
+Module not found: Can't resolve './ClientRoot'
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:07.468] Server  ERROR    ⨯ ./frontend/app/layout.tsx:2:1
+Module not found: Can't resolve './ClientRoot'
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:07.470] Server  ERROR    ⨯ ./frontend/app/layout.tsx:2:1
+Module not found: Can't resolve './ClientRoot'
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:03:08.050] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Module not found: Can't resolve './ClientRoot'
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:29.052] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Module not found: Can't resolve './ClientRoot'
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+https://nextjs.org/docs/messages/module-not-found
+[00:03:32.054] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Export default doesn't exist in target module
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+The export default was not found in module [project]/frontend/app/ClientRoot.ts [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:03:35.056] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Export default doesn't exist in target module
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+The export default was not found in module [project]/frontend/app/ClientRoot.ts [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:03:42.052] Browser ERROR   ./frontend/app/ClientRoot.ts:28:7
+Parsing ecmascript source code failed
+  26 |   return (
+  27 |     <div
+> 28 |       className="min-h-screen flex flex-col bg-gradient-to-br from-primary/10 via-base-200 to-base-100
+     |       ^^^^^^^^^
+  29 |                  text-base-content font-sans antialiased tracking-tight transition-colors"
+  30 |     >
+  31 |       {/* Navbar + Toggle */}
+
+Expected '>', got 'className'
+
+Import trace:
+  Server Component:
+    ./frontend/app/ClientRoot.ts
+    ./frontend/app/layout.tsx
+[00:03:42.052] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Export default doesn't exist in target module
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+The export default was not found in module [project]/frontend/app/ClientRoot.ts [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:03:46.057] Browser ERROR   ./frontend/app/ClientRoot.ts:28:7
+Parsing ecmascript source code failed
+  26 |   return (
+  27 |     <div
+> 28 |       className="min-h-screen flex flex-col bg-gradient-to-br from-primary/10 via-base-200 to-base-100
+     |       ^^^^^^^^^
+  29 |                  text-base-content font-sans antialiased tracking-tight transition-colors"
+  30 |     >
+  31 |       {/* Navbar + Toggle */}
+
+Expected '>', got 'className'
+
+Import trace:
+  Server Component:
+    ./frontend/app/ClientRoot.ts
+    ./frontend/app/layout.tsx
+[00:03:46.057] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Export default doesn't exist in target module
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+The export default was not found in module [project]/frontend/app/ClientRoot.ts [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:03:54.052] Browser ERROR   ./frontend/app/ClientRoot.ts:28:7
+Parsing ecmascript source code failed
+  26 |   return (
+  27 |     <div
+> 28 |       className="min-h-screen flex flex-col bg-gradient-to-br from-primary/10 via-base-200 to-base-100
+     |       ^^^^^^^^^
+  29 |                  text-base-content font-sans antialiased tracking-tight transition-colors"
+  30 |     >
+  31 |       {/* Navbar + Toggle */}
+
+Expected '>', got 'className'
+
+Import trace:
+  Server Component:
+    ./frontend/app/ClientRoot.ts
+    ./frontend/app/layout.tsx
+[00:03:54.052] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Export default doesn't exist in target module
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot"; // dipisah ke file client
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+The export default was not found in module [project]/frontend/app/ClientRoot.ts [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:04:07.056] Browser ERROR   ./frontend/app/ClientRoot.ts:28:7
+Parsing ecmascript source code failed
+  26 |   return (
+  27 |     <div
+> 28 |       className="min-h-screen flex flex-col bg-gradient-to-br from-primary/10 via-base-200 to-base-100
+     |       ^^^^^^^^^
+  29 |                  text-base-content font-sans antialiased tracking-tight transition-colors"
+  30 |     >
+  31 |       {/* Navbar + Toggle */}
+
+Expected '>', got 'className'
+
+Import trace:
+  Server Component:
+    ./frontend/app/ClientRoot.ts
+    ./frontend/app/layout.tsx
+[00:04:07.056] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Export default doesn't exist in target module
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+The export default was not found in module [project]/frontend/app/ClientRoot.ts [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:05:03.056] Browser ERROR   ./frontend/app/ClientRoot.ts:25:10
+Parsing ecmascript source code failed
+  23 |
+  24 |   return (
+> 25 |     <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary/10 via-base-200 to-base-100 text-base-content font-sans antialiased tracking-tight transition-colors">
+     |          ^^^^^^^^^
+  26 |       <header className="sticky top-0 z-50 backdrop-blur-md bg-base-100/80 border-b border-base-300 shadow-sm flex justify-between items-center px-6 py-3">
+  27 |         <Navbar />
+  28 |         <button
+
+Expected '>', got 'className'
+
+Import trace:
+  Server Component:
+    ./frontend/app/ClientRoot.ts
+    ./frontend/app/layout.tsx
+[00:05:03.057] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Export default doesn't exist in target module
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+The export default was not found in module [project]/frontend/app/ClientRoot.ts [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:05:08.953] Server  LOG      ✓ Compiled in 320ms
+[00:05:09.843] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:05:10.409] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:10.409] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `RootLayout`.
+[00:05:16.386] Server  LOG      ✓ Compiled in 231ms
+[00:05:17.056] Browser ERROR   ./frontend/app/ClientRoot.ts:25:10
+Parsing ecmascript source code failed
+  23 |
+  24 |   return (
+> 25 |     <div className="min-h-screen flex flex-col bg-gradient-to-br from-primary/10 via-base-200 to-base-100 text-base-content font-sans antialiased tracking-tight transition-colors">
+     |          ^^^^^^^^^
+  26 |       <header className="sticky top-0 z-50 backdrop-blur-md bg-base-100/80 border-b border-base-300 shadow-sm flex justify-between items-center px-6 py-3">
+  27 |         <Navbar />
+  28 |         <button
+
+Expected '>', got 'className'
+
+Import trace:
+  Server Component:
+    ./frontend/app/ClientRoot.ts
+    ./frontend/app/layout.tsx
+[00:05:17.056] Browser ERROR   ./frontend/app/layout.tsx:2:1
+Export default doesn't exist in target module
+  1 | import "./globals.css";
+> 2 | import ClientRoot from "./ClientRoot";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export const metadata = {
+  5 |   title: "Fullstack Blog App",
+
+The export default was not found in module [project]/frontend/app/ClientRoot.ts [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[00:05:21.503] Server  LOG      ✓ Compiled in 149ms
+[00:05:21.542] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:05:21.997] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:05:22.220] Server  ERROR    ⨯ Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+[00:05:22.616] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:22.616] Browser ERROR   uncaughtError: Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `RootLayout`.
+[00:05:29.131] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:05:29.162] Server  LOG      ✓ Compiled in 129ms
+[00:05:29.391] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:05:29.650] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:06:03.387] Server  LOG      ✓ Compiled in 125ms
+[00:06:07.164] Server  LOG      ✓ Compiled in 195ms
+[00:06:11.926] Server  LOG      ✓ Compiled in 68ms
+[00:06:23.271] Server  LOG      ✓ Compiled in 112ms
+[00:07:53.758] Server  LOG      ✓ Compiled in 96ms
+[00:09:08.741] Server  LOG      ✓ Compiled in 99ms
+[00:10:12.793] Server  LOG      ✓ Compiled in 108ms
+[00:10:32.511] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:35.090] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:38.802] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:48.112] Server  LOG      ✓ Compiled in 141ms
+[00:12:22.429] Server  LOG      ✓ Compiled in 109ms
+[00:12:37.112] Server  LOG      ✓ Compiled in 69ms
+[00:12:42.573] Server  LOG      ✓ Compiled in 73ms
+[00:12:49.744] Server  LOG      ✓ Compiled in 62ms
+[00:14:20.433] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./frontend/app/(auth)/login/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:14:20.434] Server  LOG      ✓ Compiled in 286ms
+[00:14:21.064] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:25.829] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:29.237] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:41.079] Server  LOG      ✓ Compiled in 179ms
+[00:15:46.930] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:51.249] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:51.625] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:51.977] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:52.213] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:52.546] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:52.780] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:53.018] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:53.256] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:53.505] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:53.742] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:53.990] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:54.180] Server  ERROR    ⨯ Error: The default export is not a React Component in "/posts/not-found"
+[00:16:54.394] Browser ERROR   uncaughtError: Error: The default export is not a React Component in "/posts/not-found"
+[00:17:07.257] Server  LOG      ✓ Compiled in 362ms
+[00:17:07.733] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:21.052] Browser ERROR   ./frontend/app/error.tsx
+Ecmascript file had an error
+frontend/app/error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:17:34.702] Server  LOG      ✓ Compiled in 651ms
+[00:17:35.054] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:16.233] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.325] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.383] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.416] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.446] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.474] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.505] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.536] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.561] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.594] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.624] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.646] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.669] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.695] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.724] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.752] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:16.779] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:16.779] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:16.779] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:16.779] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:16.806] Server  ERROR    ⨯ ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:17.121] Browser ERROR   uncaughtError: Error: ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:18:17.273] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:17.273] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:17.273] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:17.273] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:17.273] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:17.273] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:18:23.054] Browser ERROR   ./frontend/app/global-error.tsx
+Ecmascript file had an error
+frontend/app/global-error.tsx must be a Client Component. Add the "use client" directive the top of the file to resolve this issue.
+Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:21:07.871] Server  LOG      ✓ Compiled in 918ms
+[00:21:10.383] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:22.157] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:23:49.444] Server  LOG      ✓ Compiled in 128ms
+[00:24:10.712] Server  LOG      ✓ Compiled in 92ms
+[00:24:24.986] Server  LOG      ✓ Compiled in 106ms
+[00:24:40.287] Server  LOG      ✓ Compiled in 152ms
+[00:24:56.128] Server  LOG      ✓ Compiled in 75ms
+[00:24:59.730] Server  LOG      ✓ Compiled in 78ms
+[00:25:03.208] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:04.614] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:19.564] Server  LOG      ✓ Compiled in 192ms
+[00:25:26.780] Server  LOG      ✓ Compiled in 53ms
+[00:25:47.955] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:56.329] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:25:58.754] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:02.883] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:40.150] Server  LOG      ✓ Compiled in 73ms
+[00:26:52.230] Server  LOG      ✓ Compiled in 62ms
+[00:26:58.111] Server  LOG      ✓ Compiled in 39ms
+[00:27:19.932] Server  LOG      ✓ Compiled in 47ms
+[00:27:31.253] Server  LOG      ✓ Compiled in 120ms
+[00:27:44.494] Server  LOG      ✓ Compiled in 37ms
+[00:29:24.165] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:31:11.873] Server  LOG      ✓ Compiled in 193ms
+[00:31:15.950] Server  LOG      ✓ Compiled in 459ms
+[00:31:32.356] Server  LOG      ✓ Compiled in 352ms
+[00:31:47.292] Server  LOG      ✓ Compiled in 51ms
+[00:31:52.373] Server  LOG      ✓ Compiled in 50ms
+[00:32:21.039] Server  LOG      ✓ Compiled in 60ms
+[00:32:34.225] Server  LOG      ✓ Compiled in 58ms
+[00:32:57.640] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:18.691] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./frontend/app/(auth)/register/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:18.702] Server  LOG      ✓ Compiled in 222ms
+[00:33:19.305] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:23.467] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./frontend/app/(auth)/register/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:33:23.488] Server  LOG      ✓ Compiled in 176ms
+[00:33:24.021] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:33:32.091] Server  LOG      ✓ Compiled in 73ms
+[00:33:50.680] Server  LOG      ✓ Compiled in 78ms
+[00:33:58.761] Server  LOG      ✓ Compiled in 53ms
+[00:34:12.759] Server  LOG      ✓ Compiled in 62ms
+[00:34:21.594] Server  LOG      ✓ Compiled in 72ms
+[00:34:28.143] Server  LOG      ✓ Compiled in 49ms
+[00:34:51.791] Server  LOG      ✓ Compiled in 51ms
+[00:35:55.178] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:36:17.539] Server  LOG      ✓ Compiled in 284ms
+[00:36:20.762] Server  LOG      ✓ Compiled in 162ms

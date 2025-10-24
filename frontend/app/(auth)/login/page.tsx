@@ -1,50 +1,107 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { apiFetch } from "@/lib/api";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+
+  // 🔹 Jika sudah login (punya token), langsung arahkan ke /posts
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) router.replace("/posts");
+  }, [router]);
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
+    setLoading(true);
+    setError("");
+
     try {
       const res = await apiFetch("/auth/signin", {
         method: "POST",
         body: JSON.stringify({ email, password }),
       });
       localStorage.setItem("token", res.token);
-      window.location.href = "/posts";
-    } catch (err) {
-      setError("Invalid credentials");
+      router.push("/posts"); // ✅ redirect halus tanpa reload
+    } catch {
+      setError("Invalid email or password.");
+    } finally {
+      setLoading(false);
     }
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <form
-        onSubmit={handleLogin}
-        className="card w-96 bg-base-100 shadow-xl p-8 space-y-3"
-      >
-        <h2 className="text-2xl font-bold text-center">Login</h2>
-        <input
-          type="email"
-          placeholder="Email"
-          className="input input-bordered w-full"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="input input-bordered w-full"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        {error && <p className="text-red-500 text-sm">{error}</p>}
-        <button className="btn btn-primary w-full">Login</button>
-      </form>
-    </div>
+    <section className="flex flex-col items-center justify-center min-h-[85vh] px-4 sm:px-6 md:px-10 relative">
+      {/* === Login Card === */}
+      <div className="w-full max-w-md bg-base-100/80 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-base-300">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-primary text-center mb-2">
+          Welcome Back
+        </h1>
+        <p className="text-base-content/70 text-sm sm:text-base mb-8 text-center">
+          Log in to manage your posts and continue writing.
+        </p>
+
+        <form onSubmit={handleLogin} className="space-y-4 text-left">
+          <label className="form-control w-full">
+            <span className="label-text font-medium text-base-content">
+              Email
+            </span>
+            <input
+              type="email"
+              className="input input-bordered w-full px-2"
+              placeholder="your@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </label>
+
+          <label className="form-control w-full">
+            <span className="label-text font-medium text-base-content ">
+              Password
+            </span>
+            <input
+              type="password"
+              className="input input-bordered w-full px-2"
+              placeholder="••••••••"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </label>
+
+          {error && <p className="text-red-500 text-sm font-medium">{error}</p>}
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="btn btn-primary bg-blue-600 hover:bg-blue-700 text-white w-full rounded-full font-semibold mt-2 disabled:opacity-60"
+          >
+            {loading ? "Logging in..." : "Login"}
+          </button>
+        </form>
+
+        <p className="text-center text-base-content/70 text-sm mt-6">
+          Don’t have an account?{" "}
+          <Link
+            href="/register"
+            className="text-primary font-medium hover:underline"
+          >
+            Create one
+          </Link>
+        </p>
+      </div>
+
+      {/* === Background === */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-base-200 to-base-100 animate-gradient-slow"></div>
+      <div className="absolute top-10 left-10 w-40 sm:w-64 h-40 sm:h-64 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-secondary/10 rounded-full blur-3xl"></div>
+    </section>
   );
 }

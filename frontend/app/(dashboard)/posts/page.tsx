@@ -78,19 +78,19 @@ export default function PostsPage() {
                 <div className="flex justify-end gap-2 mt-4">
                   <Link
                     href={`/posts/${post.id}`}
-                    className="btn btn-sm btn-outline font-medium"
+                    className="btn btn-sm btn-outline font-medium outline-primary text-primary px-2 hover:bg-primary/10 text-sm"
                   >
                     Edit
                   </Link>
                   <button
-                    className="btn btn-sm btn-error text-white font-medium"
+                    className="btn btn-sm btn-error bg-red-600 text-white px-2 hover:bg-red-700 font-medium text-sm"
                     onClick={async () => {
                       const token = localStorage.getItem("token");
                       await apiFetch(`/posts/${post.id}`, {
                         method: "DELETE",
                         headers: { Authorization: `Bearer ${token}` },
                       });
-                      fetchPosts(); // refresh after delete
+                      fetchPosts();
                     }}
                   >
                     Delete

@@ -2,41 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === Custom Global Styling === */
-
-/* Body defaults */
-html,
-body {
-  height: 100%;
-  scroll-behavior: smooth;
-  background-color: hsl(var(--b1)); /* DaisyUI background color */
+@keyframes gradient-slow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* Custom font and layout fixes */
-body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: hsl(var(--bc)); /* DaisyUI base content color */
-}
-
-/* Scrollbar styling (optional but nice touch) */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--bc) / 0.2);
-  border-radius: 9999px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--bc) / 0.4);
-}
-
-/* Link transitions */
-a {
-  transition: color 0.2s ease, background-color 0.2s ease;
-}
-
-/* Add DaisyUI theme customization (optional) */
-[data-theme="light"] {
-  --primary: 217 91% 60%; /* Tailwind Blue */
+.animate-gradient-slow {
+  background-size: 200% 200%;
+  animation: gradient-slow 15s ease infinite;
 }

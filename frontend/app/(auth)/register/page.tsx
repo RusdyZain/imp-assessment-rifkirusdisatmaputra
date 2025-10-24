@@ -8,22 +8,47 @@ export default function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  // 🔹 Jika sudah punya token, langsung ke /posts
+  // Jika sudah login, arahkan langsung ke /posts
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) router.replace("/posts");
   }, [router]);
 
+  // 🔐 Password validation (mirror backend)
+  function validatePassword(pw: string) {
+    const rules = [
+      { regex: /.{8,}/, msg: "Password must be at least 8 characters" },
+      { regex: /[A-Z]/, msg: "Must contain at least one uppercase letter" },
+      { regex: /[a-z]/, msg: "Must contain at least one lowercase letter" },
+      { regex: /[0-9]/, msg: "Must contain at least one number" },
+      {
+        regex: /[^A-Za-z0-9]/,
+        msg: "Must contain at least one special character",
+      },
+    ];
+    for (const r of rules) if (!r.regex.test(pw)) return r.msg;
+    return "";
+  }
+
   async function handleRegister(e: React.FormEvent) {
     e.preventDefault();
-    setLoading(true);
     setError("");
     setSuccess("");
+    setLoading(true);
+
+    // Validasi sisi client
+    const pwError = validatePassword(password);
+    if (pwError) {
+      setError(pwError);
+      setLoading(false);
+      return;
+    }
 
     try {
       await apiFetch("/auth/signup", {
@@ -32,8 +57,12 @@ export default function RegisterPage() {
       });
       setSuccess("🎉 Account created successfully! Redirecting...");
       setTimeout(() => router.push("/login"), 1500);
-    } catch {
-      setError("Registration failed. Please try again.");
+    } catch (err: any) {
+      console.error("Registration error:", err);
+      const message = err.message?.includes("Email already registered")
+        ? "Email already registered"
+        : "Registration failed. Please try again.";
+      setError(message);
     } finally {
       setLoading(false);
     }
@@ -51,6 +80,7 @@ export default function RegisterPage() {
         </p>
 
         <form onSubmit={handleRegister} className="space-y-4 text-left">
+          {/* Full Name */}
           <label className="form-control w-full">
             <span className="label-text font-medium text-base-content">
               Full Name
@@ -62,9 +92,11 @@ export default function RegisterPage() {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              autoFocus
             />
           </label>
 
+          {/* Email */}
           <label className="form-control w-full">
             <span className="label-text font-medium text-base-content">
               Email
@@ -76,28 +108,46 @@ export default function RegisterPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              autoComplete="email"
             />
           </label>
 
+          {/* Password */}
           <label className="form-control w-full">
             <span className="label-text font-medium text-base-content">
               Password
             </span>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               placeholder="••••••••"
               className="input input-bordered w-full px-2 bg-slate-100"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              autoComplete="new-password"
+              minLength={8}
             />
+
+            <label className="label cursor-pointer mt-1 flex items-center gap-2">
+              <input
+                type="checkbox"
+                className="checkbox checkbox-primary"
+                checked={showPassword}
+                onChange={() => setShowPassword(!showPassword)}
+              />
+              <span className="label-text text-sm select-none">
+                Show Password
+              </span>
+            </label>
           </label>
 
+          {/* Error / Success messages */}
           {error && <p className="text-red-500 text-sm font-medium">{error}</p>}
           {success && (
             <p className="text-green-600 text-sm font-medium">{success}</p>
           )}
 
+          {/* Submit */}
           <button
             type="submit"
             disabled={loading}
@@ -118,7 +168,7 @@ export default function RegisterPage() {
         </p>
       </div>
 
-      {/* === Background === */}
+      {/* === Background effects === */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/10 via-base-200 to-base-100 animate-gradient-slow"></div>
       <div className="absolute top-10 left-10 w-40 sm:w-64 h-40 sm:h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-secondary/10 rounded-full blur-3xl"></div>

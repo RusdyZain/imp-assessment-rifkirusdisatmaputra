@@ -7,14 +7,18 @@ export default function PostsPage() {
   const [posts, setPosts] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [page, setPage] = useState(1);
+  const [meta, setMeta] = useState<any>(null);
 
-  async function fetchPosts() {
+  // 🔹 Fetch posts dengan pagination
+  async function fetchPosts(currentPage = 1) {
     try {
       const token = localStorage.getItem("token");
-      const res = await apiFetch("/posts?page=1&limit=5", {
+      const res = await apiFetch(`/posts?page=${currentPage}&limit=6`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setPosts(res.data);
+      setMeta(res.meta);
     } catch {
       setError("Failed to load posts");
     } finally {
@@ -23,8 +27,8 @@ export default function PostsPage() {
   }
 
   useEffect(() => {
-    fetchPosts();
-  }, []);
+    fetchPosts(page);
+  }, [page]);
 
   if (loading)
     return <p className="text-center mt-10 text-base-content/70">Loading...</p>;
@@ -36,7 +40,7 @@ export default function PostsPage() {
   return (
     <section className="flex flex-col items-center justify-start min-h-[80vh] text-center px-4 sm:px-6 md:px-10 py-8 sm:py-12 relative">
       {/* === Card Container === */}
-      <div className="w-full max-w-4xl bg-base-100/80 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-base-300 transition-all">
+      <div className="w-full max-w-5xl bg-base-100/80 backdrop-blur-md p-6 sm:p-8 md:p-10 rounded-3xl shadow-xl border border-base-300 transition-all">
         {/* Header Section */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8 text-left">
           <div>
@@ -68,6 +72,16 @@ export default function PostsPage() {
                 key={post.id}
                 className="card bg-base-100 shadow-md border border-base-300 p-5 text-left transition-all hover:shadow-lg hover:-translate-y-1"
               >
+                {/* Image */}
+                {post.imageUrl && (
+                  <img
+                    src={`${process.env.NEXT_PUBLIC_API_URL}${post.imageUrl}`}
+                    alt={post.title}
+                    className="rounded-xl mb-3 h-48 w-full object-cover border"
+                  />
+                )}
+
+                {/* Title & Content */}
                 <h3 className="text-xl font-bold text-base-content mb-2 line-clamp-1">
                   {post.title}
                 </h3>
@@ -75,6 +89,12 @@ export default function PostsPage() {
                   {post.content}
                 </p>
 
+                <p className="text-xs text-base-content/50 mt-2">
+                  by {post.author?.name || "Unknown"} •{" "}
+                  {new Date(post.createdAt).toLocaleDateString()}
+                </p>
+
+                {/* Actions */}
                 <div className="flex justify-end gap-2 mt-4">
                   <Link
                     href={`/posts/${post.id}`}
@@ -85,12 +105,14 @@ export default function PostsPage() {
                   <button
                     className="btn btn-sm btn-error bg-red-600 text-white px-2 hover:bg-red-700 font-medium text-sm"
                     onClick={async () => {
+                      const confirmDelete = confirm("Are you sure to delete?");
+                      if (!confirmDelete) return;
                       const token = localStorage.getItem("token");
                       await apiFetch(`/posts/${post.id}`, {
                         method: "DELETE",
                         headers: { Authorization: `Bearer ${token}` },
                       });
-                      fetchPosts();
+                      fetchPosts(page);
                     }}
                   >
                     Delete
@@ -98,6 +120,29 @@ export default function PostsPage() {
                 </div>
               </div>
             ))}
+          </div>
+        )}
+
+        {/* Pagination */}
+        {meta && (
+          <div className="flex justify-center items-center gap-2 mt-8">
+            <button
+              className="btn btn-outline btn-sm"
+              disabled={!meta.hasPrevPage}
+              onClick={() => setPage((p) => Math.max(1, p - 1))}
+            >
+              « Prev
+            </button>
+            <span className="text-sm text-base-content/70">
+              Page {meta.page} of {meta.totalPages}
+            </span>
+            <button
+              className="btn btn-outline btn-sm"
+              disabled={!meta.hasNextPage}
+              onClick={() => setPage((p) => p + 1)}
+            >
+              Next »
+            </button>
           </div>
         )}
       </div>

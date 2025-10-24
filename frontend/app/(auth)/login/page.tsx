@@ -7,30 +7,54 @@ import { apiFetch } from "@/lib/api";
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  // 🔹 Jika sudah login (punya token), langsung arahkan ke /posts
+  // 🔹 Jika sudah login, langsung ke /posts
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (token) router.replace("/posts");
   }, [router]);
 
+  // 🔐 Validasi sederhana agar user tidak kirim form kosong
+  function validateForm() {
+    if (!email.trim() || !password.trim()) {
+      setError("Email and password are required.");
+      return false;
+    }
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      setError("Invalid email format.");
+      return false;
+    }
+    return true;
+  }
+
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
-    setLoading(true);
     setError("");
+    if (!validateForm()) return;
 
+    setLoading(true);
     try {
       const res = await apiFetch("/auth/signin", {
         method: "POST",
         body: JSON.stringify({ email, password }),
       });
+
+      // Simpan token & redirect
       localStorage.setItem("token", res.token);
-      router.push("/posts"); // ✅ redirect halus tanpa reload
-    } catch {
-      setError("Invalid email or password.");
+      router.push("/posts");
+    } catch (err: any) {
+      console.error("Login error:", err);
+      const message =
+        err.message?.includes("Invalid credentials") ||
+        err.message?.includes("401")
+          ? "Invalid email or password."
+          : "Login failed. Please try again.";
+      setError(message);
     } finally {
       setLoading(false);
     }
@@ -48,36 +72,54 @@ export default function LoginPage() {
         </p>
 
         <form onSubmit={handleLogin} className="space-y-4 text-left">
+          {/* Email */}
           <label className="form-control w-full">
             <span className="label-text font-medium text-base-content">
               Email
             </span>
             <input
               type="email"
-              className="input input-bordered w-full px-2"
+              className="input input-bordered w-full px-2 bg-slate-100"
               placeholder="your@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              autoComplete="email"
             />
           </label>
 
+          {/* Password */}
           <label className="form-control w-full">
-            <span className="label-text font-medium text-base-content ">
+            <span className="label-text font-medium text-base-content">
               Password
             </span>
             <input
-              type="password"
-              className="input input-bordered w-full px-2"
+              type={showPassword ? "text" : "password"}
+              className="input input-bordered w-full px-2 bg-slate-100"
               placeholder="••••••••"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              autoComplete="current-password"
             />
+
+            <label className="label cursor-pointer mt-1 flex items-center gap-2">
+              <input
+                type="checkbox"
+                className="checkbox checkbox-primary"
+                checked={showPassword}
+                onChange={() => setShowPassword(!showPassword)}
+              />
+              <span className="label-text text-sm select-none">
+                Show Password
+              </span>
+            </label>
           </label>
 
+          {/* Error */}
           {error && <p className="text-red-500 text-sm font-medium">{error}</p>}
 
+          {/* Submit */}
           <button
             type="submit"
             disabled={loading}

@@ -6,6 +6,7 @@ import {
   createPost,
   updatePost,
   deletePost,
+  uploadImage,
 } from "../controllers/postController";
 
 export const postRoutes = new Hono();
@@ -16,5 +17,6 @@ postRoutes.use("*", requireAuth);
 postRoutes.get("/", getPosts);
 postRoutes.get("/:id", getPostById);
 postRoutes.post("/", createPost);
+postRoutes.post("/upload", requireAuth, uploadImage);
 postRoutes.put("/:id", updatePost);
 postRoutes.delete("/:id", deletePost);

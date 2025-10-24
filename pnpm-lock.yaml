@@ -35,6 +35,9 @@ importers:
       '@types/bcryptjs':
         specifier: ^3.0.0
         version: 3.0.0
+      '@types/formidable':
+        specifier: ^3.4.6
+        version: 3.4.6
       '@types/jsonwebtoken':
         specifier: ^9.0.10
         version: 9.0.10
@@ -538,6 +541,9 @@ packages:
   '@types/bcryptjs@3.0.0':
     resolution: {integrity: sha512-WRZOuCuaz8UcZZE4R5HXTco2goQSI2XxjGY3hbM/xDvwmqFWd4ivooImsMx65OKM6CtNKbnZ5YL+YwAwK7c1dg==}
     deprecated: This is a stub types definition. bcryptjs provides its own type definitions, so you do not need this installed.
+
+  '@types/formidable@3.4.6':
+    resolution: {integrity: sha512-LI4Hk+KNsM5q7br4oMVoaWeb+gUqJpz1N8+Y2Q6Cz9cVH33ybahRKUWaRmMboVlkwSbOUGgwc/pEkS7yMSzoWg==}
 
   '@types/jsonwebtoken@9.0.10':
     resolution: {integrity: sha512-asx5hIG9Qmf/1oStypjanR7iKTv0gXQ1Ov/jfrX6kS/EO0OFni8orbmGCn0672NHR3kXHwpAwR+B368ZGN/2rA==}
@@ -1554,6 +1560,10 @@ snapshots:
   '@types/bcryptjs@3.0.0':
     dependencies:
       bcryptjs: 3.0.2
+
+  '@types/formidable@3.4.6':
+    dependencies:
+      '@types/node': 24.9.1
 
   '@types/jsonwebtoken@9.0.10':
     dependencies:
